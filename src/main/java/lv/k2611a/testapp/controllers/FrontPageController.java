@@ -19,7 +19,7 @@ public class FrontPageController {
         String groupsList = "<div style=\"margin-top: 20px;\">";
         groupService.fillHashMap();
         for(int i=1; i <= groupService.groups.size(); i++) {
-            groupsList += "<a href=\"group/" + i + "\"><div style=\"width: 128px; height: 128px; border: 1px solid; display: inline-block; line-height: 3; text-align: center; font-size: 40px; font-family: Arial,Helvetica,sans-serif; color: gray;";
+            groupsList += "<a href=\"group/" + i + "/\"><div style=\"width: 128px; height: 128px; border: 1px solid; display: inline-block; line-height: 3; text-align: center; font-size: 40px; font-family: Arial,Helvetica,sans-serif; color: gray;";
             if(i % 4 != 0) {
                 groupsList += " margin-right: 55px;";
             }
