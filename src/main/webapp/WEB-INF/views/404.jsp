@@ -8,10 +8,7 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
-
-<p>${username}</p>
-
+<h1>Sorry, this page was not found. Better luck next time.</h1>
 
 </body>
 </html>
