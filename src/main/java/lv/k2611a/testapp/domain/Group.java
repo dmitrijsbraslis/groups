@@ -1,9 +1,6 @@
 package lv.k2611a.testapp.domain;
 
-/**
- * @author <a href="mailto:kirill.afanasjev@odnoklassniki.ru">Kirill Afanasjev</a>
- */
-public class User {
+public class Group {
     private String name;
 
     public String getName() {

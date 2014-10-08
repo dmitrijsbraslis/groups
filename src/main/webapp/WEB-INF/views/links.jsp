@@ -6,9 +6,13 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Группы</title>
+</head>
 <body>
+Group ID: ${groupid}<br>
+LINKS
 
-<h1>Sorry, this page was not found. Better luck next time.</h1>
 
 </body>
 </html>

@@ -6,11 +6,12 @@
 
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Группы</title>
+</head>
 <body>
-
-<h1>My First Heading</h1>
-
-<p>${username}</p>
+Group ID: ${groupid}<br>
+USERS
 
 
 </body>
