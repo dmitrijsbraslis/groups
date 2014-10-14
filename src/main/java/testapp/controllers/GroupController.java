@@ -1,7 +1,7 @@
-package lv.k2611a.testapp.controllers;
+package testapp.controllers;
 
-import lv.k2611a.testapp.domain.Group;
-import lv.k2611a.testapp.services.GroupService;
+import testapp.domain.Group;
+import testapp.services.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

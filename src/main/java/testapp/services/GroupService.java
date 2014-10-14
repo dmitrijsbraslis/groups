@@ -1,8 +1,9 @@
-package lv.k2611a.testapp.services;
+package testapp.services;
 
-import lv.k2611a.testapp.domain.Group;
+import testapp.domain.Group;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,6 +11,7 @@ import java.util.Map;
 public class GroupService {
     public Map<Integer, String> groups = new HashMap<Integer, String>();
 
+    @PostConstruct
     public void fillHashMap() {
         for(int i = 1; i <= 30; i++) {
             groups.put(i, "This is Group Nr. " + i);

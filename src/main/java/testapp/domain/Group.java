@@ -1,4 +1,4 @@
-package lv.k2611a.testapp.domain;
+package testapp.domain;
 
 public class Group {
     private String name;
