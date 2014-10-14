@@ -15,6 +15,12 @@
 		Groups
 	</div>
 </div>
-${groupsList}
+<div style="margin-top: 20px; width: 715px;">
+    <c:forEach var="group" items="${allGroups}">
+        <a href="group/${group.id}"><div style="width: 128px; height: 128px; border: 1px solid; display: inline-block; line-height: 3; text-align: center; font-size: 40px; font-family: Arial,Helvetica,sans-serif; color: gray;">
+        ${group.id}
+        </div></a>
+    </c:forEach>
+</div>
 </body>
 </html>
