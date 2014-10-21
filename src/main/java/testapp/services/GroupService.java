@@ -2,7 +2,6 @@ package testapp.services;
 
 import testapp.domain.Group;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.HashMap;

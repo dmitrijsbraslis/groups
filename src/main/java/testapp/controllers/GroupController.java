@@ -23,12 +23,6 @@ public class GroupController {
         return "main";
     }
 
-    @RequestMapping(value = "/group/{groupId}/themes")
-    public String getThemesPage(Model model, @PathVariable Integer groupId) {
-        model.addAttribute("groupid", groupId);
-        return "themes";
-    }
-
     @RequestMapping(value = "/group/{groupId}/photos")
     public String getPhotosPage(Model model, @PathVariable Integer groupId) {
         model.addAttribute("groupid", groupId);
