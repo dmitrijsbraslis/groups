@@ -1,5 +1,6 @@
 package testapp.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import testapp.domain.Theme;
 
@@ -29,7 +30,7 @@ public class ThemeService {
         themes.put(5L, "theme for group 4");
     }
 
-    public List<Theme> getGroupThemes(Integer groupId) {
+    public List<Theme> getGroupThemes(int groupId) {
         List<Theme> groupThemes = new ArrayList<Theme>();
         for (Map.Entry<Long, Integer> entry : groupIdThemeId.entrySet()) {
             if (entry.getValue().equals(groupId)) {
@@ -42,11 +43,12 @@ public class ThemeService {
         return groupThemes;
     }
 
-    public void addTheme(Integer groupId, String text) {
-        if (text != null) {
-            long newThemeId = System.currentTimeMillis();
-            groupIdThemeId.put(newThemeId, groupId);
-            themes.put(newThemeId, text);
+    public void addTheme(int groupId, String text) {
+        if (text == null) {
+            throw new IllegalArgumentException("Empty text");
         }
+        long newThemeId = System.currentTimeMillis();
+        groupIdThemeId.put(newThemeId, groupId);
+        themes.put(newThemeId, text);
     }
 }

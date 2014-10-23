@@ -19,7 +19,7 @@ public class GroupService {
         }
     }
 
-    public Group getGroupNameById(Integer groupID) {
+    public Group getGroupNameById(int groupID) {
         Group group = new Group();
         group.setName(groups.get(groupID));
         return group;

@@ -2,7 +2,7 @@ package testapp.domain;
 
 public class Theme {
     private String text;
-    private Long id;
+    private long id;
 
     public long getId() {
         return id;

@@ -16,7 +16,6 @@ public class GroupController {
 
     @RequestMapping(value = "/group/{groupId}")
     public String getMainPage(Model model, @PathVariable Integer groupId) {
-        groupService.fillHashMap();
         Group group = groupService.getGroupNameById(groupId);
         model.addAttribute("groupid", groupId);
         model.addAttribute("groupName", group.getName());
