@@ -7,10 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import testapp.services.ThemeService;
-
-import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class ThemeController {
@@ -30,20 +27,8 @@ public class ThemeController {
             Model model,
             @PathVariable int groupId,
             @RequestParam("themeText") String themeText) {
-        themeService.addTheme(groupId, themeText);
 
+        themeService.addTheme(groupId, themeText);
         return getThemesPage(model, groupId);
     }
-
-    /*
-    @RequestMapping(value = "/group/addTheme", method = RequestMethod.POST)
-    public String addTheme(HttpServletRequest request, Model model) {
-        String themeText = request.getParameter("themeText");
-        Integer groupId = Integer.parseInt(request.getParameter("groupId"));
-        themeService.addTheme(groupId, themeText);
-        model.addAttribute("groupid", groupId);
-        model.addAttribute("groupThemes", themeService.getGroupThemes(groupId));
-        return "themes";
-    }
-    */
 }

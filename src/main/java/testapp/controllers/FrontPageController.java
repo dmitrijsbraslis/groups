@@ -1,5 +1,7 @@
 package testapp.controllers;
 
+import org.springframework.web.bind.annotation.RequestParam;
+import testapp.domain.GroupCategories;
 import testapp.services.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,9 +15,22 @@ public class FrontPageController {
     @Autowired
     private GroupService groupService;
 
-    @RequestMapping(method = RequestMethod.GET, value = "/")
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getMainPage(Model model) {
         model.addAttribute("allGroups", groupService.getAllGroups());
+        model.addAttribute("allCat", GroupCategories.values());
         return "groups";
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public String addGroup(
+            Model model,
+            @RequestParam("name") String name,
+            @RequestParam("description") String description,
+            @RequestParam("category") int category,
+            @RequestParam("is_open") boolean is_open) {
+
+        groupService.addGroup(name, description, category, is_open);
+        return getMainPage(model);
     }
 }
