@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Service
 public class ThemeService {
-    public long theme_id = 1L;
+    public long themeId = 1L;
     public Map<Long, Theme> allThemes = new HashMap<Long, Theme>();
     public Map<Long, Integer> groupIdThemeId = new HashMap<Long, Integer>();
     public Map<Long, String> themes = new HashMap<Long, String>();
@@ -34,7 +34,7 @@ public class ThemeService {
         Theme newTheme = new Theme();
         newTheme.setText(text);
         newTheme.setId(groupId);
-        allThemes.put(theme_id, newTheme);
-        theme_id++;
+        allThemes.put(themeId, newTheme);
+        themeId++;
     }
 }

@@ -28,9 +28,9 @@ public class FrontPageController {
             @RequestParam("name") String name,
             @RequestParam("description") String description,
             @RequestParam("category") int category,
-            @RequestParam("is_open") boolean is_open) {
+            @RequestParam("is_open") boolean isOpen) {
 
-        groupService.addGroup(name, description, category, is_open);
+        groupService.addGroup(name, description, category, isOpen);
         return getMainPage(model);
     }
 }

@@ -9,7 +9,7 @@ import java.util.*;
 
 @Service
 public class GroupService {
-    public int group_id = 1;
+    public int groupId = 1;
     public Map<Integer, Group> groups = new HashMap<Integer, Group>();
 
     @PostConstruct
@@ -33,14 +33,14 @@ public class GroupService {
         return allGroups;
     }
 
-    public void addGroup(String name, String text, int category, boolean is_open) {
+    public void addGroup(String name, String text, int category, boolean isOpen) {
         Group newGroup = new Group();
         newGroup.setName(name);
         newGroup.setCategory(category);
         newGroup.setDescription(text);
-        newGroup.setIs_open(is_open);
-        newGroup.setId(group_id);
-        groups.put(group_id, newGroup);
-        group_id++;
+        newGroup.setIs_open(isOpen);
+        newGroup.setId(groupId);
+        groups.put(groupId, newGroup);
+        groupId++;
     }
 }
