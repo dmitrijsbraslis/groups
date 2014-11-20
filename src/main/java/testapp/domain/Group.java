@@ -1,11 +1,14 @@
 package testapp.domain;
 
-public class Group {
+import java.io.Serializable;
+
+public class Group implements Serializable{
     private String name;
-    private int id;
+    private long id;
     private String description;
     private boolean is_open;
     private int category;
+    private long user_id;
 
     public Group() {
     }
@@ -22,7 +25,7 @@ public class Group {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -48,5 +51,13 @@ public class Group {
 
     public void setCategory(int category) {
         this.category = category;
+    }
+
+    public long getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(long user_id) {
+        this.user_id = user_id;
     }
 }

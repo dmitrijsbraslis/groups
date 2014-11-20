@@ -14,8 +14,6 @@ import java.util.Map;
 public class ThemeService {
     public long themeId = 1L;
     public Map<Long, Theme> allThemes = new HashMap<Long, Theme>();
-    public Map<Long, Integer> groupIdThemeId = new HashMap<Long, Integer>();
-    public Map<Long, String> themes = new HashMap<Long, String>();
 
     public List<Theme> getGroupThemes(int groupId) {
         List<Theme> groupThemes = new ArrayList<Theme>();

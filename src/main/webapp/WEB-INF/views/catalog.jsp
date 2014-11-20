@@ -32,23 +32,23 @@
             <ul class="catalog_ul">
                   <li class="catalog_li"><a class="catalog_link" href="/test-mvn-app">Все</a></li>
                 <c:forEach var="cat" items="${allCat}">
-                  <li class="catalog_li"><a class="catalog_link" href="catalog/${cat.category}">${cat.text}</a></li>
+                  <li class="catalog_li"><a class="catalog_link" href="./${cat.category}">${cat.text}</a></li>
                 </c:forEach>
             </ul>
         </div>
     </div>
     <div class="content">
         <div class="header">
-            Мои группы
+            ${categoryName}
         </div>
-        <c:if test="${empty myGroups}" >
+        <c:if test="${empty groups}" >
             <div class="no_content" onClick="openPopUp();">
-                У вас нет групп, но вы можете их создать!
+                В этой категории групп нет, но вы можете их создать!
             </div>
         </c:if>
-        <c:if test="${not empty myGroups}" >
+        <c:if test="${not empty groups}" >
             <div class="group_list">
-                <c:forEach var="myGroup" items="${myGroups}">
+                <c:forEach var="myGroup" items="${groups}">
                     <div class="group_card">
                         <a href="group/${myGroup.id}">
                             <div class="group_image">
@@ -57,25 +57,6 @@
                         </a>
                         <a href="group/${myGroup.id}" class="group_link_txt">
                             ${myGroup.name}
-                        </a>
-                    </div>
-                </c:forEach>
-            </div>
-        </c:if>
-        <c:if test="${not empty allGroups}">
-            <div class="header">
-                Все группы
-            </div>
-            <div class="group_list">
-                <c:forEach var="group" items="${allGroups}">
-                    <div class="group_card">
-                        <a href="group/${group.id}">
-                            <div class="group_image">
-                                <img src="${pageContext.request.contextPath}/resources/img/group-interest190.png" class="no_avatar">
-                            </div>
-                        </a>
-                        <a href="group/${group.id}" class="group_link_txt">
-                            ${group.name}
                         </a>
                     </div>
                 </c:forEach>
@@ -90,7 +71,7 @@
             <div class="popUp_title">
                 Создать группу
             </div>
-            <form action="" method="POST">
+            <form action="/test-mvn-app/" method="POST">
             <div class="create_group_form">
                 <div class="form_i">
                     <div class="form_label">

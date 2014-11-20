@@ -10,16 +10,11 @@
     <title>Группы</title>
     <link href="${pageContext.request.contextPath}/resources/css/reset.css" rel="stylesheet" type="text/css">
     <link href="${pageContext.request.contextPath}/resources/css/main.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 <div class="toolbar">
-    <div class="toolbar_c">
-        <a class="logo_link" href="${pageContext.request.contextPath}">
-            <div class="logo">
-                Группы
-            </div>
-        </a>
-    </div>
+    <jsp:include page="toolbar.jsp"/>
 </div>
 <div class="content_w">
     <div class="misc_block">
@@ -35,8 +30,10 @@
             <a href="${groupId}/photos" style="font-size: 15px; color: #333; text-decoration: none; padding-right: 10px;">Фотогрфии</a>
             <a href="${groupId}/users" style="font-size: 15px; color: #333; text-decoration: none; padding-right: 10px;">Участники</a>
             <a href="${groupId}/links" style="font-size: 15px; color: #333; text-decoration: none;">Ссылки</a>
-        </div>
+        </div><br><br><br><br>
+        <div id="calendar"></div>
     </div>
 </div>
+<script src="${pageContext.request.contextPath}/resources/js/calendar.js"></script>
 </body>
 </html>
