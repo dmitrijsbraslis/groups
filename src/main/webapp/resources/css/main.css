@@ -5,7 +5,7 @@ body  {
     }
 
 .toolbar {
-    background: url("/test-mvn-app/resources/img/toolbar.png") repeat-x;
+    background: url("/resources/img/toolbar.png") repeat-x;
     position: fixed;
     height: 48px;
     top: 0;
@@ -67,7 +67,7 @@ body  {
             }
 
         .logo:hover {
-                background: url("/test-mvn-app/resources/img/toolbar_o.png") repeat-x;
+                background: url("/resources/img/toolbar_o.png") repeat-x;
             }
 
 .content_w {
@@ -94,7 +94,7 @@ body  {
         }
 
             .add_group_img {
-                background: url("/test-mvn-app/resources/img/group-create.png");
+                background: url("/resources/img/group-create.png");
                 background-repeat: no-repeat;
                 height: 48px;
                 width: 26%;

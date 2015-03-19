@@ -121,8 +121,26 @@
             <version>2.5</version>
             <scope>provided</scope>
         </dependency>
-
-
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.21</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.1.5.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
     </dependencies>
 
 
@@ -150,6 +168,7 @@
                 <artifactId>maven-jetty-plugin</artifactId>
                 <version>6.1.10</version>
                 <configuration>
+                    <contextPath>/</contextPath>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <stopKey>foo</stopKey>
                     <stopPort>9999</stopPort>
