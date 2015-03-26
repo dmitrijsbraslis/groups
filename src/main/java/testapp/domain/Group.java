@@ -6,9 +6,9 @@ public class Group implements Serializable{
     private String name;
     private long id;
     private String description;
-    private boolean is_open;
+    private boolean open;
     private int category;
-    private long user_id;
+    private long admin;
 
     public Group() {
     }
@@ -37,12 +37,12 @@ public class Group implements Serializable{
         this.description = description;
     }
 
-    public boolean isIs_open() {
-        return is_open;
+    public boolean isOpen() {
+        return open;
     }
 
-    public void setIs_open(boolean is_open) {
-        this.is_open = is_open;
+    public void setOpen(boolean is_open) {
+        this.open = is_open;
     }
 
     public int getCategory() {
@@ -53,11 +53,11 @@ public class Group implements Serializable{
         this.category = category;
     }
 
-    public long getUser_id() {
-        return user_id;
+    public long getAdmin() {
+        return admin;
     }
 
-    public void setUser_id(long user_id) {
-        this.user_id = user_id;
+    public void setAdmin(long user_id) {
+        this.admin = user_id;
     }
 }

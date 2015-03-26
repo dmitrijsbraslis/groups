@@ -16,7 +16,7 @@
             ${user_name}(${user_id})
         </div>
         <div class="logout">
-            <a href="/test-mvn-app/logout"><img src="${pageContext.request.contextPath}/resources/img/exit.png"></a>
+            <a href="/logout"><img src="${pageContext.request.contextPath}/resources/img/exit.png"></a>
         </div>
     </div>
 </div>

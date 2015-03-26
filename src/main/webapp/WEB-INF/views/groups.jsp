@@ -30,7 +30,7 @@
         </a>
         <div class="catalog_main">
             <ul class="catalog_ul">
-                  <li class="catalog_li"><a class="catalog_link" href="/test-mvn-app">Все</a></li>
+                  <li class="catalog_li"><a class="catalog_link" href="">Все</a></li>
                 <c:forEach var="cat" items="${allCat}">
                   <li class="catalog_li"><a class="catalog_link" href="catalog/${cat.category}">${cat.text}</a></li>
                 </c:forEach>

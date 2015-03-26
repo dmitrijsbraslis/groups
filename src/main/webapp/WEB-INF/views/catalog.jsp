@@ -30,7 +30,7 @@
         </a>
         <div class="catalog_main">
             <ul class="catalog_ul">
-                  <li class="catalog_li"><a class="catalog_link" href="/test-mvn-app">Все</a></li>
+                  <li class="catalog_li"><a class="catalog_link" href="/">Все</a></li>
                 <c:forEach var="cat" items="${allCat}">
                   <li class="catalog_li"><a class="catalog_link" href="./${cat.category}">${cat.text}</a></li>
                 </c:forEach>
@@ -71,7 +71,7 @@
             <div class="popUp_title">
                 Создать группу
             </div>
-            <form action="/test-mvn-app/" method="POST">
+            <form action="" method="POST">
             <div class="create_group_form">
                 <div class="form_i">
                     <div class="form_label">

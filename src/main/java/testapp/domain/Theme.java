@@ -2,14 +2,32 @@ package testapp.domain;
 
 public class Theme {
     private String text;
-    private int id;
+    private long groupId;
+    private long author;
+    private long id;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
+    }
+
+    public long getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(long groupId) {
+        this.groupId = groupId;
+    }
+
+    public long getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(long author) {
+        this.author = author;
     }
 
     public String getText() {
